@@ -42,9 +42,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             layout: path.join(__dirname, './src/index.html'),
             template: path.join(__dirname, './src/components/home.html'),
-            filename: 'home.html',
+            filename: 'index.html',
             inject: false,
-            js: 'home.js',
+            js: 'index.js',
         }),
 
         new HtmlWebpackPlugin({
