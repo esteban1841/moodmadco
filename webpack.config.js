@@ -10,7 +10,8 @@ module.exports = {
     entry: {
         main: './src/components/main.js',
         home: './src/components/home.js',
-        aboutUs: './src/components/aboutUs.js'
+        aboutUs: './src/components/aboutUs.js',
+        ourWork: './src/components/ourWork.js'
     },
     output: {
         filename: '[name].js',
@@ -25,21 +26,7 @@ module.exports = {
         new CleanWebpackPlugin(['extension']),
 
         // Copy assets to the extension' deployment dir.
-        new CopyWebpackPlugin([{from: 'src/images/favicon/favicon.ico', to: 'images/favicon'}]),
-        new CopyWebpackPlugin([{from: 'src/images/favicon/favicon-16x16.png', to: 'images/favicon'}]),
-        new CopyWebpackPlugin([{from: 'src/images/favicon/favicon-32x32.png', to: 'images/favicon'}]),
-        new CopyWebpackPlugin([{from: 'src/images/favicon/favicon-96x96.png', to: 'images/favicon'}]),
-        new CopyWebpackPlugin([{from: 'src/images/spain.png', to: 'images/'}]),
-        new CopyWebpackPlugin([{from: 'src/images/english.png', to: 'images/'}]),
-        new CopyWebpackPlugin([{from: 'src/images/logo.png', to: 'images/'}]),
-        new CopyWebpackPlugin([{from: 'src/images/menu.svg', to: 'images/'}]),
-        new CopyWebpackPlugin([{from: 'src/images/down-arrow.svg', to: 'images/'}]),
-        new CopyWebpackPlugin([{from: 'src/images/sample.mp4', to: 'images/'}]),
-        new CopyWebpackPlugin([{from: 'src/images/gallery/design.png', to: 'images/gallery'}]),
-        new CopyWebpackPlugin([{from: 'src/images/gallery/ecommerce.png', to: 'images/gallery'}]),
-        new CopyWebpackPlugin([{from: 'src/images/gallery/elearning.png', to: 'images/gallery'}]),
-        new CopyWebpackPlugin([{from: 'src/images/gallery/outsourcing.png', to: 'images/gallery'}]),
-        new CopyWebpackPlugin([{from: 'src/images/gallery/webdev.png', to: 'images/gallery'}]),
+        new CopyWebpackPlugin([{from: 'src/images/', to: 'images/'}]),
         new CopyWebpackPlugin([{from: 'src/styles.css', to: ''}]),
         new CopyWebpackPlugin([{from: 'src/data/data.json', to: ''}]),
 
@@ -67,6 +54,14 @@ module.exports = {
             inject: false,
             js: 'aboutUs.js'
         }),
+
+        new HtmlWebpackPlugin({
+            layout: path.join(__dirname, './src/index.html'),
+            template: path.join(__dirname, './src/components/ourWork.html'),
+            filename: 'ourWork.html',
+            inject: false,
+            js: 'ourWork.js'
+        })
     ],
     module: {
         rules: [
