@@ -10,8 +10,6 @@ module.exports = {
     entry: {
         main: './src/components/main.js',
         home: './src/components/home.js',
-        aboutUs: './src/components/aboutUs.js',
-        ourWork: './src/components/ourWork.js'
     },
     output: {
         filename: '[name].js',
@@ -46,22 +44,6 @@ module.exports = {
             inject: false,
             js: 'index.js',
         }),
-
-        new HtmlWebpackPlugin({
-            layout: path.join(__dirname, './src/index.html'),
-            template: path.join(__dirname, './src/components/aboutUs.html'),
-            filename: 'aboutUs.html',
-            inject: false,
-            js: 'aboutUs.js'
-        }),
-
-        new HtmlWebpackPlugin({
-            layout: path.join(__dirname, './src/index.html'),
-            template: path.join(__dirname, './src/components/ourWork.html'),
-            filename: 'ourWork.html',
-            inject: false,
-            js: 'ourWork.js'
-        })
     ],
     module: {
         rules: [

@@ -9,6 +9,7 @@ let selectors =
             languageDefaultContainer: '#languageDefault',
             arrowLanguage: '#arrowLanguage',
             optionLanguage: '#optionLanguage',
+            closeMenu: '#closeMenu',
 
             mobile: '.mobile',
             menuChooseLanguage: '.Menu-choose-language',
@@ -30,6 +31,7 @@ function selectLanguage() {
 
 function menuEvents() {
     $(selectors.menuMobile).click(toggleMenu);
+    $(selectors.closeMenu).click(toggleMenu);
     $(selectors.languageDefaultContainer).click(selectLanguage);
 }
 
@@ -87,7 +89,6 @@ function init() {
 
     menuEvents();
     loadContentPage();
-    scrollPage();
     gallery();
 }
 

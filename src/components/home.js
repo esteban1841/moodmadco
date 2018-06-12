@@ -1,13 +1,3 @@
-export function scrollPage() {
-    $(window).scroll(function() {
-        if($(this).scrollTop() > 0) {
-            $('nav').addClass('scrolled');
-        } else {
-            $('nav').removeClass('scrolled');
-        }
-    });
-}
-
 export function gallery() {
     const panel = document.querySelectorAll('.panel');
 
