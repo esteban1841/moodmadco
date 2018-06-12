@@ -4,20 +4,21 @@
       "image": "images/spain.png",
       "text": "ES",
       "menu": {
-        "aboutUs": "Acerca de nosotros",
-        "ourWork": "Nuestro Trabajo",
-        "ourServices": "Nuestros Servicios",
-        "contact": "Contacto"
+        "Services": "Servicios",
+        "whoWeAre": "¿Quiénes somos?",
+        "technologies": "Tecnologías",
+        "experience": "Experiencias",
+        "contact": "Contactanos"
       }
     },
     "english": {
       "image": "images/english.png",
       "text": "EN",
       "menu": {
-        "aboutUs": "About us",
-        "ourWork": "Our work",
-        "ourJob": "Our job",
-        "ourServices": "Our services",
+        "Services": "Services",
+        "whoWeAre": "Who we Are?",
+        "technologies": "Technologies",
+        "experience": "Experience",
         "contact": "Contact"
       }
     }
