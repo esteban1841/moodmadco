@@ -285,7 +285,8 @@ video {
     margin-right: 20px;
 }
 
-.services-header h2 {
+.services-header h2,
+.who-we-are-header {
     padding: 0;
     color: #1e272f;
     font-family: 'Montserrat', sans-serif;
@@ -297,13 +298,15 @@ video {
     line-height: 34px;
 }
 
-.services-header h2 span {
+.services-header h2 span,
+.who-we-are-header span {
     font-size: 34px;
     position: relative;
     display: block;
 }
 
-.services-header h2 span:after {
+.services-header h2 span:after,
+.who-we-are-header span:after {
     content: "";
     position: absolute;
     background: #00c1ff;
@@ -630,6 +633,68 @@ footer .social-icon {
     border-radius: 50%;
 }
 
+.who-we-are {
+    background-image: url("./images/background/background-mobile-quienessomos.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+
+.who-we-are-header {
+    font-weight: 700;
+}
+
+.who-we-are-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.who-we-are-header span {
+    font-weight: 400;
+    font-size: 0.75em;
+}
+
+.who-we-are p {
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
+    text-align: center;
+    padding: 100px 30px 30px;
+}
+
+.who-we-are button {
+    padding: 5px 20px;
+    max-width: 250px;
+    align-self: flex-end;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.who-we-are button:before {
+    content: "";
+    position: absolute;
+    background: #00c1ff;
+    width: 100px;
+    height: 3px;
+    top: -20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 form textarea {
     margin-top: 30px;
     height: 78px;
@@ -670,7 +735,8 @@ form textarea:-ms-input-placeholder {
     text-align: center;
 }
 
-form input[type="submit"] {
+form input[type="submit"],
+.work-with-us {
     background-color: #00c1ff;
     color: #ffffff;
     -webkit-border-radius: 20px;
@@ -971,6 +1037,44 @@ footer p {
         box-sizing: border-box;
     }
 
+    .who-we-are {
+        background-image: url("./images/background/background-tablet-quienessomos.png");
+    }
+
+    .who-we-are-content {
+        justify-content: center;
+    }
+
+    .who-we-are h2 {
+        text-align: right;
+        padding: 40px;
+        align-self: flex-end;
+    }
+
+    .who-we-are p {
+        padding-top: 20px;
+        padding-bottom: 100px;
+        width: 50%;
+        align-self: flex-end;
+        padding-right: 40px;
+        text-align: right;
+    }
+
+    .who-we-are button {
+        margin: 0 40px;
+    }
+
+    .who-we-are-header span:after,
+    .who-we-are button:before {
+        left: auto;
+        right: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+
     .contact {
         padding: 0 50px;
     }
@@ -1104,5 +1208,14 @@ footer p {
     .column-container {
         max-width: 80%;
         margin: 0 auto;
+    }
+
+
+    .who-we-are {
+        background-image: url("./images/background/background-desktop-quienessomos.png");
+    }
+
+    .who-we-are-content {
+        width: 80%;
     }
 }
