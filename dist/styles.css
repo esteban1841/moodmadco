@@ -286,27 +286,34 @@ video {
 }
 
 .services-header h2,
-.who-we-are-header {
+.who-we-are-header,
+.technologies-header,
+.experience-header {
     padding: 0;
     color: #1e272f;
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-style: normal;
     font-stretch: normal;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     line-height: 34px;
 }
 
 .services-header h2 span,
-.who-we-are-header span {
-    font-size: 34px;
+.who-we-are-header span,
+.technologies-header span,
+.experience-header span {
+    font-size: 28px;
     position: relative;
     display: block;
+    font-weight: 400;
 }
 
 .services-header h2 span:after,
-.who-we-are-header span:after {
+.who-we-are-header span:after,
+.technologies-header span:after,
+.experience-header span:after {
     content: "";
     position: absolute;
     background: #00c1ff;
@@ -371,7 +378,7 @@ video {
     text-align: center;
 }
 
-.services-container .service a {
+.services-container .service button {
     color: #00c1ff;
     font-family: Montserrat;
     font-size: 24px;
@@ -379,7 +386,11 @@ video {
     font-stretch: normal;
     font-weight: 400;
     text-decoration: none;
+    border: none;
     border-bottom: 1px solid #00c1ff;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
 }
 
 footer .social-icons-container {
@@ -661,7 +672,9 @@ footer .social-icon {
     font-size: 0.75em;
 }
 
-.who-we-are p {
+.who-we-are p,
+.technologies-section p,
+.experience p {
     color: #ffffff;
     font-family: 'Muli', sans-serif;
     font-size: 20px;
@@ -693,6 +706,158 @@ footer .social-icon {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+.technologies-section {
+    padding: 0 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.technologies-icons {
+    margin-top: 30px;
+}
+
+.technologies-section img {
+    width: 55px;
+    height: 55px;
+}
+
+.technologies-section .container-img {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+}
+
+.back-end-container,
+.mobile-container,
+.e-commerce-container,
+.front-end-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.technologies-section h3 {
+    color: #00c1ff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -20px;
+}
+
+.back-end-container h3,
+.front-end-container h3 {
+    left: -8px;
+}
+
+.mobile-container h3,
+.e-commerce-container h3 {
+    right: -8px;
+}
+
+.front-end-container h3:before {
+    content: '';
+    width: 2px;
+    height: 20px;
+    background: #00c1ff;
+    position: absolute;
+    left: 6px;
+    top: -10px;
+}
+
+.mobile-container h3:before,
+.e-commerce-container h3:before {
+    content: '';
+    width: 2px;
+    height: 20px;
+    background: #00c1ff;
+    position: absolute;
+    right: 6px;
+    top: -12px;
+}
+
+.back-end-container,
+.front-end-container {
+    padding: 20px 0 30px 10px;
+    border-left: 2px solid #00c1ff;
+    border-bottom: 2px solid #00c1ff;
+}
+
+.mobile-container,
+.e-commerce-container {
+    justify-content: flex-end;
+    padding: 20px 10px 30px 0;
+    border-right: 2px solid #00c1ff;
+    border-bottom: 2px solid #00c1ff;
+}
+.back-end-container div,
+.front-end-container div,
+.e-commerce-container div {
+    justify-content: space-between;
+}
+
+.e-commerce-container {
+    border: none;
+}
+
+.mobile-container div {
+    justify-content: space-around;
+}
+
+
+.our-work {
+    background-image: url("./images/background/background-mobile-experiencias.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.our-work img {
+    margin: 0 auto;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-item {
+    align-items: center;
+}
+.carousel-indicators li {
+    border: 1px solid #00c1ff;
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background: #00c1ff;
+}
+
+.our-work .carousel {
+    position: initial;
+}
+
+.our-work .experience .experience-header {
+    color: #1e272f;
+    position: relative;
+}
+
+.experience p {
+    color: #57575a;
 }
 
 form textarea {
@@ -825,7 +990,6 @@ footer p {
     font-style: normal;
     font-stretch: normal;
     font-weight: 300;
-    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1065,7 +1229,8 @@ footer p {
     }
 
     .who-we-are-header span:after,
-    .who-we-are button:before {
+    .who-we-are button:before,
+    .experience-header span:after {
         left: auto;
         right: 0;
         -webkit-transform: none;
@@ -1075,6 +1240,49 @@ footer p {
         transform: none;
     }
 
+    .technologies-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .technologies-description {
+        width: 50%;
+    }
+
+    .technologies-icons {
+        width: 50%;
+        margin-top: 60px;
+    }
+
+    .technologies-section img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .our-work {
+        background-image: url("./images/background/background-tablet-experiencias.png");
+    }
+
+    .our-work img {
+        width: 50% !important;
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-work .experience-header,
+    .experience p {
+        align-self: flex-end;
+        padding-right: 80px;
+        text-align: right;
+    }
+
+    .experience p {
+        width: 50%;
+    }
     .contact {
         padding: 0 50px;
     }
@@ -1217,5 +1425,33 @@ footer p {
 
     .who-we-are-content {
         width: 80%;
+    }
+
+    .technologies-description {
+        width: 30%;
+    }
+
+    .our-work {
+        background-image: url("./images/background/background-desktop-experiencias.png");
+    }
+
+    .our-work .experience-header,
+    .experience p {
+        padding-right: 200px;
+    }
+
+    .our-work img {
+        width: 25% !important;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height : 400px)  {
+    .who-we-are,
+    .our-work {
+        height: 100%;
+    }
+
+    .who-we-are button {
+        margin-bottom: 30px;
     }
 }
